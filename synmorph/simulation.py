@@ -144,12 +144,11 @@ class Simulation:
         Perform the simulation
         :param progress_bar: bool. Whether to show or hide the progress bar.
         """
-        dt = self.dt  ##repeatedly called to saved here temporarily.
-        k = 0  ##dummy variable to count the number of saved time-points.
+        dt = self.dt  ## repeatedly called to saved here temporarily.
+        k = 0  ## dummy variable to count the number of saved time-points.
 
         grn = True if self.grn is not None else False  # bool for whether to perform the grn calculation if such a model is specified.
-        saveall = True if self.save_options[
-                              "save"] == "all" else False  # bool for whether to dump all instances of the Tissue class into unique pickle files.
+        saveall = True if self.save_options["save"] == "all" else False  # bool for whether to dump all instances of the Tissue class into unique pickle files.
 
         def update_with_grn(dt):  # short-hand for updating tissue and grn.
             self.t.update(dt)
