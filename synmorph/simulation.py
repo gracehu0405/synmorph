@@ -316,7 +316,7 @@ class Simulation:
                          "active_params": serialise_dict(self.t.active.active_params),
                          "run_options": self.t.mesh.run_options,
                          "simulation_params": self.simulation_params,
-                         "L":self.t.mesh.L}
+                         "L":setlf.t.mesh.L}
         json.dump(skeleton_dict, codecs.open(dir_path + "/" + self.name + "_simulation" + '.json', 'w', encoding='utf-8'),
                   separators=(',', ':'),
                   sort_keys=True,
